@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2022_02_03_030251) do
   enable_extension "plpgsql"
 
   create_table "units", force: :cascade do |t|
-    t.integer "unit_number"
-    t.integer "floor_plan"
+    t.integer "unit_number", null: false
+    t.integer "floor_plan", null: false
     t.string "resident"
     t.date "move_in"
     t.date "move_out"
